@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/nuxt/components/NavBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/layouts/empty.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/layouts/error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/pages/about/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/pages/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/pages/users/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nuxt/pages/users/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +14,12 @@
       <list>
         <option value="CSS File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/nuxt" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ReachLearn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -63,6 +57,7 @@
       <workItem from="1648978904894" duration="4752000" />
       <workItem from="1648986408219" duration="151000" />
       <workItem from="1649174699904" duration="7712000" />
+      <workItem from="1649239854106" duration="3325000" />
     </task>
     <servers />
   </component>

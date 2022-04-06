@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1>User with id - {{$route.params.id}} \ {{user.name}}</h1>
+    <h1>{{user.name}}</h1>
+    <hr>
+    {{user.email}}
   </section>
 </template>
 
@@ -10,12 +12,9 @@ export default {
   validate({params}){
     return /^\d+$/.test(params.id)
   },
-  asyncData({params}){
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve({user: {name: "test", id: params.id}})
-      },1500)
-    })
+  async asyncData({params, error, store}){
+    let user = await store.dispatch('users/fetchUserById', params.id)
+    return {user}
   }
 }
 </script>

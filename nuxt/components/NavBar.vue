@@ -16,6 +16,9 @@
           <li class="nav-item">
             <nuxt-link exact active-class="active" class="nav-link" to="/login">login</nuxt-link>
           </li>
+          <li class="nav-item" v-if="isAuth">
+            <a class="nav-link" href="#" @click.prevent="logout">logout</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -24,7 +27,18 @@
 
 <script>
 export default {
-  name: "NavBar"
+  computed: {
+    isAuth(){
+      console.log(this.$store.getters.isAuth)
+      return this.$store.getters.isAuth;
+    }
+  },
+  name: "NavBar",
+  methods: {
+    logout(){
+      this.$store.dispatch('logout');
+    }
+  }
 }
 </script>
 

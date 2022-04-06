@@ -5,6 +5,10 @@ export const actions = {
 
   logout({commit}) {
     commit('clearToken');
+  },
+
+  async nuxtServerInit({dispatch}){
+    await dispatch('users/fetchUsers');
   }
 }
 

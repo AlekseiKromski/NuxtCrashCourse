@@ -37,7 +37,8 @@ export default {
       error(e)
     }
 
-  }
+  },
+
 }
 </script>
 

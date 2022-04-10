@@ -55,14 +55,15 @@ export default {
           const formData = {
             login: this.controls.login,
             password: this.controls.password,
-            postId: ""
           }
 
           //Feature: upload to backend
           try{
-            this.$message.success('Коментарий был добавлен');
-            this.$emit('created');
+            this.$message.success('Вы успешно вошли');
+            
+
           }catch (e){
+            this.$message.error('Неверный логин или пароль');
             this.loading = false;
           }
         } else {

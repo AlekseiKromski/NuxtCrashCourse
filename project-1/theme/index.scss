@@ -16,3 +16,11 @@ html, body{
 .text-center{
   text-align: center;
 }
+
+.page-enter-active, .page-leave-active{
+  transition: opacity .5s ease-in;
+}
+
+.page-enter, .page-leave{
+  opacity: 0;
+}

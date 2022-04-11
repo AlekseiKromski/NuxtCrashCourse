@@ -1,6 +1,6 @@
 export const state = function (){
   return {
-    token: null,
+    token: true,
 
   }
 }
@@ -20,14 +20,27 @@ export const mutations = {
 
 export const actions= {
   async login({commit, dispatch}, fromData){
-    const token = await new Promise(resolve => {
-      setTimeout(() => {
-        resolve("mock-token");
-      },500)
-    })
-    dispatch('setToken', token);
+    try{
+      const token = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("mock-token");
+        },500)
+      })
+      dispatch('setToken', token);
+    }catch (e){
+      commit('setErrorMutation', e, {root: true})
+      throw e;
+    }
   },
 
+  async createUser({commit}, user){
+    try{
+      console.log('Create user')
+    }catch (e){
+      commit('setErrorMutation', e, {root: true})
+      throw e;
+    }
+  },
   setToken({commit}, token){
     commit('setTokenMutation', token);
   },

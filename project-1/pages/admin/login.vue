@@ -77,7 +77,6 @@ export default {
             this.$router.push('/admin');
 
           }catch (e){
-            this.$message.error('Неверный логин или пароль');
             this.loading = false;
           }
         } else {

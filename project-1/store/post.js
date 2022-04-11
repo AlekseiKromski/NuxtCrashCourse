@@ -30,7 +30,15 @@ export const actions= {
         ])
       }, 500)
     })
-  }
+  },
+
+  async remove({commit}, id){
+    return await new Promise(resolve => {
+      setTimeout(() => {
+        resolve(true)
+      }, 500)
+    })
+}
 
 }
 

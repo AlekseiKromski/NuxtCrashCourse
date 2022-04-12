@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-1/pages/admin/post/_id.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/post/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/post/_id.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/store/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,7 +73,8 @@
       <workItem from="1649425918706" duration="2161000" />
       <workItem from="1649496152806" duration="4083000" />
       <workItem from="1649582768739" duration="6478000" />
-      <workItem from="1649683241246" duration="9300000" />
+      <workItem from="1649683241246" duration="9375000" />
+      <workItem from="1649771377119" duration="4918000" />
     </task>
     <servers />
   </component>

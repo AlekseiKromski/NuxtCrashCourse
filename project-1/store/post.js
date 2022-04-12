@@ -49,12 +49,20 @@ export const actions= {
     })
   },
 
-  async createPost({commit}, post){
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(true)
-      },500)
-    })
+  async createPost({commit, dispatch}, {title, text, image}){
+    try{
+      return new Promise(resolve => {
+        setTimeout(() => {
+          let fd = new FormData();
+          fd.append('title', title);
+          fd.append('text', text);
+          fd.append('image', image);
+          resolve(true)
+        },500)
+      })
+    }catch (e){
+      commit('setErrorMutation', e, {root: true})
+    }
   }
 
 }

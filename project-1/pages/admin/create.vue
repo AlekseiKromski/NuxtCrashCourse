@@ -10,6 +10,17 @@
         <el-input type="textarea" resize="none" :rows="10" v-model="controls.text"/>
       </el-form-item>
 
+      <el-upload
+        class="mb"
+        drag
+        :on-change="handleChange"
+        :auto-upload="false"
+        action="https://jsonplaceholder.typicode.com/posts/">
+        <i class="el-icon-upload"></i>
+        <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+        <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
+      </el-upload>
+
       <el-form-item >
         <el-button
           type="primary"
@@ -18,6 +29,8 @@
           :loading="loading"
         >Создать</el-button>
       </el-form-item>
+
+
 
       <el-button type="text" @click="dialogVisible = true">Предосмотр</el-button>
 
@@ -47,6 +60,7 @@ export default {
   },
   data(){
     return {
+      image: null,
       loading:false,
       dialogVisible: false,
       controls: {
@@ -66,13 +80,14 @@ export default {
   methods: {
     onSubmit(){
       this.$refs.form.validate(async (valid) => {
-        if (valid) {
+        if (valid && this.image) {
           this.loading = true;
           //Feature: upload to backend
           try{
             const formData = {
               text: this.controls.text,
-              title: "Post"
+              title: "Post",
+              image: this.image
             }
             await this.$store.dispatch('post/createPost', formData)
 
@@ -84,11 +99,16 @@ export default {
             this.loading = false;
           }
         } else {
+
+          this.$message.warning('Форма не валидна');
           this.loading = false;
           console.log('error submit!!');
           return false;
         }
       });
+    },
+    handleChange(file, filelist){
+      this.image = file.raw;
     }
   }
 }

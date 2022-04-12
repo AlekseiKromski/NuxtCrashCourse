@@ -7,7 +7,7 @@
         <el-input  v-model.trim="controls.title"/>
       </el-form-item>
       <el-form-item label="Текст в формате .md или .html" prop="text">
-        <el-input type="textarea" resize="none" :rows="10" v-model.trim="controls.text"/>
+        <el-input type="textarea" resize="none" :rows="10" v-model="controls.text"/>
       </el-form-item>
 
       <el-form-item >
@@ -18,18 +18,37 @@
           :loading="loading"
         >Создать</el-button>
       </el-form-item>
+
+      <el-button type="text" @click="dialogVisible = true">Предосмотр</el-button>
+
+      <el-dialog
+        title="Tips"
+        :visible.sync="dialogVisible"
+        width="30%"
+      >
+        <div :key="controls.text">
+          <vue-markdown>{{controls.text}}</vue-markdown>
+        </div>
+
+      </el-dialog>
     </el-form>
   </div>
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown'
+
 export default {
   name: "create",
   layout: "admin",
   middleware: ['admin-auth'],
+  components: {
+    'vue-markdown': VueMarkdown
+  },
   data(){
     return {
       loading:false,
+      dialogVisible: false,
       controls: {
         text: "",
         title: ""

@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project-1/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/keys/dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/keys/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/keys/prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/store/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/store/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -73,7 +80,8 @@
       <workItem from="1649496152806" duration="4083000" />
       <workItem from="1649582768739" duration="6478000" />
       <workItem from="1649683241246" duration="9375000" />
-      <workItem from="1649771377119" duration="7178000" />
+      <workItem from="1649771377119" duration="7317000" />
+      <workItem from="1649839237374" duration="4650000" />
     </task>
     <servers />
   </component>

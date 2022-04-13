@@ -54,5 +54,7 @@ export default {
     transpile: [/^element-ui/],
   },
 
-  loader: "#409EFF"
+  loader: "#409EFF",
+
+  serverMiddleware: ['~/server/index']
 }

@@ -12,7 +12,7 @@ router.post('/admin/login', async (req,res) => {
       const token = jwt.sign({
         login: candidate.login,
         userId: candidate._id
-      }, new Date() + "aboba", {
+      },"aboba", {
         expiresIn: 60*60
       })
       return res.json({token})
@@ -26,8 +26,20 @@ router.post('/admin/login', async (req,res) => {
   }
 })
 
-router.post('/admin/create', (req,res) => {
+router.post('/admin/create', async (req,res) => {
+  const candidate = await User.findOne({login: req.body.login});
+  if(!candidate){
+    const slat = bcrypt.getSaltSync(10);
+    const user = new User.create({
+      login: req.body.login
+      password:bcrypt.hashSync(req.body.password, salt)
+    })
 
+    await user.save();
+    res.status(201).json(user);
+  }else{
+    return res.status(409).json({'message': "this login already exist"})
+  }
 })
 
 

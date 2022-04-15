@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-1/server/middleware/passport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/models/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-1/server/routes/post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/middleware/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/middleware/passport.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,9 @@
       <workItem from="1649771377119" duration="7317000" />
       <workItem from="1649839237374" duration="5369000" />
       <workItem from="1649865188966" duration="19000" />
-      <workItem from="1649953247825" duration="1597000" />
+      <workItem from="1649953247825" duration="2119000" />
+      <workItem from="1650007995865" duration="23000" />
+      <workItem from="1650039683593" duration="636000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ const Option = {
 
 module.exports = new Strategy(option, async (payload, done) =>{
   try {
-    const candidate = await User.findById(payload.userId).select("i")
+    const candidate = await User.findById(payload.userId).select("id")
 
     if(!candidate){
       done(false)

@@ -7,6 +7,7 @@ const passport = require('passport')
 const passportStrategy = './mddleware/passport'
 const AUTH_router = require('./routes/auth');
 const POST_router = require("./routes/post");
+const COMMENT_router = require("./routes/comment")
 mongoose.connect(keys.MONGO_URI)
   .then(() => {
     console.log('Database is connected')
@@ -27,6 +28,7 @@ passport.use(passportStrategy)
 //import router
 app.use('/api/auth', AUTH_router);
 app.use('/api/post', POST_router);
+app.use('/api/comment', COMMENT_router);
 
 
 module.exports = app;

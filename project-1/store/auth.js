@@ -39,10 +39,13 @@ export const actions= {
     }
   },
   setToken({commit}, token){
+    this.$axios.setToken(token, 'Bearer')
     commit('setTokenMutation', token);
   },
 
   logout({commit}){
+    this.$axios.setToken(false)
+
     commit('logoutMutation')
   }
 }
@@ -51,5 +54,8 @@ export const actions= {
 export const getters = {
   isAuth: (state) => {
     return Boolean(state.token);
+  },
+  token: (state) => {
+    return state.token
   }
 }

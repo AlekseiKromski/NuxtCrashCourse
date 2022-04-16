@@ -27,7 +27,9 @@ export default {
 
   watch: {
     error(value){
-      this.$message.error(value)
+      if(value.response.status !== 401){
+        this.$message.error(value.response.data.msg)
+      }
     }
   }
 }

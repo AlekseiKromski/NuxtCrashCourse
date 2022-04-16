@@ -57,7 +57,7 @@ export default {
         this.$message.info('Вы вышли')
         break
       case 'session':
-        this.$message.info('Сессия истекла')
+        this.$message.warning('Сессия истекла')
         break
     }
 

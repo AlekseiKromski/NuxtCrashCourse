@@ -4,7 +4,7 @@ const app = express();
 const keys = require('./keys');
 const mongoose = require('mongoose')
 const passport = require('passport')
-const passportStrategy = './mddleware/passport'
+const passportStrategy = require('./middleware/passport')
 const AUTH_router = require('./routes/auth');
 const POST_router = require("./routes/post");
 const COMMENT_router = require("./routes/comment")
@@ -22,7 +22,8 @@ mongoose.connect(keys.MONGO_URI)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(passport.initialize())
-passport.use('strategy',passportStrategy)
+console.log(passportStrategy, 'ASFASDASDAS')
+passport.use('passport-jwt',passportStrategy)
 
 
 //import router

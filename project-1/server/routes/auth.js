@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../models/user');
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const passport = require('passport');
 router.post('/admin/login', async (req,res) => {
   const candidate = await User.findOne({
     login: req.body.login
@@ -26,11 +27,11 @@ router.post('/admin/login', async (req,res) => {
   }
 })
 
-router.post('/admin/create', async (req,res) => {
+router.post('/admin/create', passport.authenticate('passport-jwt', {session: false}), async (req,res) => {
   const candidate = await User.findOne({login: req.body.login});
   if(!candidate){
-    const slat = bcrypt.getSaltSync(10);
-    const user = new User.create({
+    const salt = bcrypt.genSaltSync(10);
+    const user = await User.create({
       login: req.body.login,
       password:bcrypt.hashSync(req.body.password, salt)
     })

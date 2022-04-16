@@ -61,6 +61,7 @@ export default {
 
             this.controls.password = ""
             this.controls.login = ""
+            this.loading = false;
 
           } catch (e) {
             this.loading = false;

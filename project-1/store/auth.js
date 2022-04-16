@@ -1,6 +1,6 @@
 export const state = function (){
   return {
-    token: null,
+    token: "df",
 
   }
 }
@@ -32,9 +32,10 @@ export const actions= {
 
   async createUser({commit}, user){
     try{
-      console.log('Create user')
+      await this.$axios.post('/api/auth/admin/create', user);
+
     }catch (e){
-      commit('setErrorMutation', e, {root: true})
+      commit('setErrorMutation', e.response.data.msg, {root: true})
       throw e;
     }
   },

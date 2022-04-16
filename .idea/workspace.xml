@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project-1/plugins/axios.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/user.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/server/middleware/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/middleware/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/layouts/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/layouts/empty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/layouts/empty.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/store/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +83,7 @@
       <workItem from="1649953247825" duration="2119000" />
       <workItem from="1650007995865" duration="23000" />
       <workItem from="1650039683593" duration="3959000" />
-      <workItem from="1650122821775" duration="5796000" />
+      <workItem from="1650122821775" duration="7494000" />
     </task>
     <servers />
   </component>

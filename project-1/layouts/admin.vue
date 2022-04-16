@@ -17,6 +17,18 @@ export default {
   name: "admin",
   components: {
     'admin-aside':AdminAside
+  },
+
+  computed: {
+    error(){
+      return this.$store.getters.error;
+    }
+  },
+
+  watch: {
+    error(value){
+      this.$message.error(value)
+    }
   }
 }
 </script>

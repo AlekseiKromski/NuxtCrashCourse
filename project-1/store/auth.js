@@ -1,6 +1,6 @@
 export const state = function (){
   return {
-    token: "df",
+    token: null,
 
   }
 }
@@ -22,10 +22,9 @@ export const actions= {
   async login({commit, dispatch}, formData){
     try{
       const {token} = await this.$axios.$post('/api/auth/admin/login', formData)
-      console.log(token)
       dispatch('setToken', token);
     }catch (e){
-      commit('setErrorMutation', e.response.data.msg, {root: true})
+      commit('setErrorMutation', e, {root: true})
       throw e;
     }
   },
@@ -35,7 +34,7 @@ export const actions= {
       await this.$axios.post('/api/auth/admin/create', user);
 
     }catch (e){
-      commit('setErrorMutation', e.response.data.msg, {root: true})
+      commit('setErrorMutation', e, {root: true})
       throw e;
     }
   },

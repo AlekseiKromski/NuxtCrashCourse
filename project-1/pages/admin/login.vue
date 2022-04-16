@@ -56,6 +56,9 @@ export default {
       case 'logout':
         this.$message.info('Вы вышли')
         break
+      case 'session':
+        this.$message.info('Сессия истекла')
+        break
     }
 
   },

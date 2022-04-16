@@ -15,7 +15,8 @@ export default {
 
   watch: {
     error(value){
-      this.$message.error(value)
+      console.log(value)
+      this.$message.error(value.response.data.msg)
     }
   }
 }

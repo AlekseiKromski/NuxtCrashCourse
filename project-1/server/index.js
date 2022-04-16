@@ -22,7 +22,7 @@ mongoose.connect(keys.MONGO_URI)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(passport.initialize())
-passport.use(passportStrategy)
+passport.use('strategy',passportStrategy)
 
 
 //import router

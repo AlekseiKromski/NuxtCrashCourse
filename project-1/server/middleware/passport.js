@@ -1,7 +1,7 @@
 const {Strategy, ExtractJwt} = require('passport-jwt')
-const {model} = require('mongoose');
+// const {model} = require('mongoose');
 
-const User = model('users');
+const User = require('../models/user');
 const Option = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: "aboba"

@@ -31,7 +31,7 @@ router.post('/admin/create', async (req,res) => {
   if(!candidate){
     const slat = bcrypt.getSaltSync(10);
     const user = new User.create({
-      login: req.body.login
+      login: req.body.login,
       password:bcrypt.hashSync(req.body.password, salt)
     })
 

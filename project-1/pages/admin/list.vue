@@ -62,6 +62,7 @@ export default {
   layout: "admin",
   middleware: ['admin-auth'],
   async asyncData({store}){
+    console.log('ee')
     const posts = await store.dispatch('post/fetchAdminPosts')
     return {
       posts

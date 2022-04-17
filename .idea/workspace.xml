@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/layouts/admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/layouts/empty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/layouts/empty.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/plugins/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/plugins/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/list.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/store/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/project-1/pages/admin/list.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/project-1/plugins/axios.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/project-1/store/post.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,17 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-    <property name="vuejs.nuxt.types-notification-shown" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/yanikarp/Documents/nuxt-crash-course",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true",
+    "vuejs.nuxt.types-notification-shown": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yanikarp\Documents\nuxt-crash-course\assets\css" />
@@ -82,7 +84,10 @@
       <workItem from="1649953247825" duration="2119000" />
       <workItem from="1650007995865" duration="23000" />
       <workItem from="1650039683593" duration="3959000" />
-      <workItem from="1650122821775" duration="8379000" />
+      <workItem from="1650122821775" duration="9682000" />
+      <workItem from="1650133325861" duration="266000" />
+      <workItem from="1650133690622" duration="26000" />
+      <workItem from="1650203278016" duration="974000" />
     </task>
     <servers />
   </component>

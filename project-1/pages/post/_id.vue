@@ -2,26 +2,23 @@
   <article class="post">
     <header>
       <div class="post-title">
-        <h1>Post title</h1>
+        <h1>{{ post.title }}</h1>
         <nuxt-link to="/"><i class="el-icon-back"></i></nuxt-link>
       </div>
       <div class="post-info">
         <i class="el-icon-time"></i>
-        <small>{{new Date().toLocaleString()}}</small>
+        <small>{{new Date(post.date).toLocaleString()}}</small>
         <small>
           <i class="el-icon-view"></i>
-          42
+          {{ post.views }}
         </small>
       </div>
       <div class="post-image">
-        <img src="https://cms.finnair.com/resource/blob/653144/579f42b7348556e06040119aa977c330/berlin-sights-data.jpg?impolicy=crop&width=1698&height=955&x=0&y=88&imwidth=768" alt="">
+        <img :src="post.imageUrl" alt="">
       </div>
     </header>
     <main>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae culpa doloribus enim maiores odio praesentium totam ullam. A asperiores eos ipsum natus omnis repellat rerum, tenetur vero. Beatae, distinctio.
-      </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, aut commodi deserunt fugiat illum incidunt ipsa minima modi nulla odio officiis quo rerum sapiente similique sint totam, voluptate voluptatum.</p>
+      <vue-markdown>{{post.text}}</vue-markdown>
     </main>
 
     <footer>
@@ -29,9 +26,9 @@
         @created="createCommentHandler"
         v-if="canAddComment"
       ></comment-form>
-      <div class="comments" v-if="false">
+      <div class="comments" v-if="post.comments.length !== 0">
         <comment
-          v-for="comment in 4"
+          v-for="comment in post.comments"
           :key="comment"
           :comment="comment"
         />
@@ -47,11 +44,13 @@
 <script>
 import Comment from '@/components/main/Comment'
 import CommentForm from '@/components/main/CommentForm'
+import VueMarkdown from 'vue-markdown'
 export default {
   name: "_id",
   components: {
     'comment': Comment,
-    'comment-form': CommentForm
+    'comment-form': CommentForm,
+    'vue-markdown': VueMarkdown
   },
   validate({params}){
     return !!params.id;
@@ -65,7 +64,16 @@ export default {
     createCommentHandler(){
       this.canAddComment = false;
     }
-  }
+  },
+  async asyncData({store, params}){
+    let post = await store.dispatch('post/fetchById', params.id);
+    let views = await store.dispatch('post/addView', post);
+    post.views++;
+    console.log(views)
+    return {
+      post
+    }
+  },
 }
 </script>
 

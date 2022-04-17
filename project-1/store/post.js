@@ -21,6 +21,27 @@ export const actions= {
     }
   },
 
+  async fetch({commit}){
+    try{
+
+      let posts = await this.$axios.get('/api/post/');
+      return posts.data;
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
+  },
+
+  async fetchById({commit}, id){
+    try{
+      let post = await this.$axios.get('/api/post/' + id);
+      return post.data;
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
+  },
+
   async fetchAdminPostById({commit}, id){
     try{
       let post = await this.$axios.get('/api/post/admin/' + id);
@@ -67,8 +88,19 @@ export const actions= {
     }catch (e){
       commit('setErrorMutation', e, {root: true})
     }
-  }
+  },
 
+  async addView({commit}, post){
+    try{
+      await this.$axios.$put('/api/post/add/view/' + post._id, {
+        views: post.views
+      })
+
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
+  }
 }
 
 

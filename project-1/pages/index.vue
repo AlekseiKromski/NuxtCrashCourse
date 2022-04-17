@@ -2,8 +2,9 @@
   <el-row type="flex" justify="center" >
     <el-col :xs="24" :sm="18" :md="12" :lg="10">
       <post
-        v-for="number in 19"
-        :key="number"
+        v-for="post in posts"
+        :key="post._id"
+        :post="post"
       />
     </el-col>
   </el-row>
@@ -18,6 +19,13 @@ export default {
   name: "index",
   components: {
     'post': Post
+  },
+  async asyncData({store}){
+    const posts = await store.dispatch('post/fetch')
+
+    return {
+      posts
+    }
   }
 }
 </script>

@@ -35,6 +35,7 @@ router.get('/admin/', passport.authenticate('passport-jwt', {session: false}), a
 
     res.status(200).json(posts);
   }catch (e){
+    console.log(e)
     res.status(500).json({"message": "server error"});
 
   }
@@ -93,7 +94,7 @@ router.delete('/admin/:id', passport.authenticate('passport-jwt', {session: fals
 //return all posts
 router.get('/', async (req,res) => {
   try{
-    const posts = await Post.find().sort({date: -1});
+    const posts = await Post.find().sort([['date', -1]]);
     res.status(200).json(posts);
   }catch (e){
     console.log(e)
@@ -104,9 +105,7 @@ router.get('/', async (req,res) => {
 
 router.get('/:id', async (req,res) => {
   try{
-    res.status(200).json(await Post.findById(req.params.id).sort({date: -1}).populate('comments').exec((e, post) => {
-      res.json(post);
-    }));
+    res.status(200).json(await Post.findById(req.params.id).sort([['date', -1]]).populate('comments').exec());
   }catch (e){
     console.log(e)
     res.status(500).json({"message": "server error"});
@@ -115,19 +114,17 @@ router.get('/:id', async (req,res) => {
 })
 
 //set new view
-router.put('/:id', async (req,res) => {
+router.put('/add/view/:id', async (req,res) => {
   const $set = {
     views: ++req.body.views
   }
-
   try{
     const post = await Post.findOneAndUpdate({
-      _id: req.param.id
+      _id: req.params.id
     },{$set});
-
-    res.status(204).json({"msg": "ok"})
+    return res.status(200).json('ok');
   }catch (e){
-
+    console.log(e)
   }
 })
 

@@ -8,16 +8,16 @@
         slot="header"
         class="post-header"
       >
-        <h3>Post title</h3>
+        <h3>{{ post.title }}</h3>
 
-        <small>{{new Date().toLocaleString()}}</small>
+        <small>{{new Date(post.date).toLocaleString()}}</small>
       </header>
 
       <div
         class="post-body"
       >
         <img
-          src="https://cms.finnair.com/resource/blob/653144/579f42b7348556e06040119aa977c330/berlin-sights-data.jpg?impolicy=crop&width=1698&height=955&x=0&y=88&imwidth=768"
+          :src="post.imageUrl"
           class="post-img"
           alt="">
       </div>
@@ -29,7 +29,7 @@
         >Открыть пост</el-button>
 
         <span>
-        <i class="el-icon-message">12</i>
+        <i class="el-icon-message">{{post.comments.length}}</i>
       </span>
       </footer>
     </el-card>
@@ -40,10 +40,10 @@
 <script>
 export default {
   name: "Post",
+  props: ['post'],
   methods: {
     openPost(){
-      let id = 'test-id'
-      this.$router.push(`/post/${id}`)
+      this.$router.push(`/post/${this.post._id}`)
     }
   }
 }

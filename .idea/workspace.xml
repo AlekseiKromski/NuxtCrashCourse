@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/pages/admin/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/store/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-1/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/pages/admin/post/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/post/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/middleware/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/middleware/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/middleware/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/middleware/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/models/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/models/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/routes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/routes/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/store/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +53,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/yanikarp/Documents/nuxt-crash-course",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true",
-    "vuejs.nuxt.types-notification-shown": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yanikarp/Documents/nuxt-crash-course&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;vuejs.nuxt.types-notification-shown&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yanikarp\Documents\nuxt-crash-course\assets\css" />
@@ -87,7 +94,8 @@
       <workItem from="1650122821775" duration="9682000" />
       <workItem from="1650133325861" duration="266000" />
       <workItem from="1650133690622" duration="26000" />
-      <workItem from="1650203278016" duration="974000" />
+      <workItem from="1650203278016" duration="4246000" />
+      <workItem from="1650207936831" duration="2128000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@
     <el-form @submit.native.prevent="onSubmit" style="width: 600px;" :model="controls" :rules="rules" ref="form">
 
       <el-form-item label="Заглавие" prop="title">
-        <el-input  v-model.trim="controls.title"/>
+        <el-input  v-model="controls.title"/>
       </el-form-item>
       <el-form-item label="Текст в формате .md или .html" prop="text">
         <el-input type="textarea" resize="none" :rows="10" v-model="controls.text"/>
@@ -35,7 +35,7 @@
       <el-button type="text" @click="dialogVisible = true">Предосмотр</el-button>
 
       <el-dialog
-        title="Tips"
+        :title="controls.title"
         :visible.sync="dialogVisible"
         width="30%"
       >
@@ -86,14 +86,18 @@ export default {
           try{
             const formData = {
               text: this.controls.text,
-              title: "Post",
+              title: this.controls.title,
               image: this.image
             }
-            await this.$store.dispatch('post/createPost', formData)
+            let response = await this.$store.dispatch('post/createPost', formData)
 
-            this.$message.success('Вы успешно создали пост');
+            if(response){
+              this.$message.success('Вы успешно создали пост');
 
-            this.$router.push('/admin/list');
+              this.$router.push('/admin/list');
+            }
+
+            this.loading = false;
 
           }catch (e){
             this.loading = false;

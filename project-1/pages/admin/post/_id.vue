@@ -10,7 +10,7 @@
     <h3>Редактировать</h3>
     <el-form @submit.native.prevent="onSubmit" style="width: 600px;" :model="controls" :rules="rules" ref="form">
       <el-form-item label="Текст в формате .md или .html" prop="text">
-        <el-input type="textarea" resize="none" :rows="10" v-model.trim="controls.text"/>
+        <el-input type="textarea" resize="none" :rows="10" v-model="controls.text"/>
       </el-form-item>
 
 
@@ -60,7 +60,7 @@ export default {
   },
   async asyncData({store, params}){
     const post = await store.dispatch('post/fetchAdminPostById', params.id);
-    return {post};
+    return {post: post.data};
   },
   data(){
     return {
@@ -87,6 +87,8 @@ export default {
         this.$message.info('Вы вышли')
         break
     }
+
+    this.controls.text = this.post.text
 
   },
   methods: {

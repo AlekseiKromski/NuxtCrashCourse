@@ -10,56 +10,60 @@ export const mutations = {
 
 export const actions= {
   async fetchAdminPosts({commit}){
-    return await new Promise(resolve => {
-      setTimeout(() => {
+    try{
 
-        resolve(posts)
-      }, 500)
-    })
+      let posts = await this.$axios.get('/api/post/admin/');
+
+      return posts;
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
   },
 
   async fetchAdminPostById({commit}, id){
-    return await new Promise(resolve => {
-      setTimeout(() => {
-        resolve(posts.find(p => p._id == id));
-      }, 500)
-    })
+    try{
+      let post = await this.$axios.get('/api/post/admin/' + id);
+      return post;
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
   },
 
   async remove({commit}, id){
-    return await new Promise(resolve => {
-      setTimeout(() => {
-        resolve(true)
-      }, 500)
-    })
+    try{
+      let post = await this.$axios.delete('/api/post/admin/' + id);
+
+      return post;
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
+
   },
 
 
   async editPost({commit}, post){
-    return new Promise(resolve => {
-      setTimeout(() => {
-        for (let post_local of posts){
-          if(post_local._id == post._id) {
-            post_local.text = post.text
-            break;
-          }
+    await this.$axios.put('/api/post/admin/' + post._id, {text: post.text});
+    for (let post_local of posts){
+      if(post_local._id == post._id) {
+        post_local.text = post.text
+        break;
+      }
 
-        }
-      },500)
-    })
+    }
+
   },
 
   async createPost({commit, dispatch}, {title, text, image}){
     try{
-      return new Promise(resolve => {
-        setTimeout(() => {
-          let fd = new FormData();
-          fd.append('title', title);
-          fd.append('text', text);
-          fd.append('image', image);
-          resolve(true)
-        },500)
-      })
+      let fd = new FormData();
+      fd.append('title', title);
+      fd.append('text', text);
+      fd.append('image', image);
+      return await this.$axios.post('/api/post/admin', fd);
+
     }catch (e){
       commit('setErrorMutation', e, {root: true})
     }

@@ -22,7 +22,6 @@ mongoose.connect(keys.MONGO_URI)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(passport.initialize())
-console.log(passportStrategy, 'ASFASDASDAS')
 passport.use('passport-jwt',passportStrategy)
 
 

@@ -1,11 +1,11 @@
 <template>
   <el-card class="comment">
     <div class="comment-header">
-      <small>Aleksei</small>
-      <small><i class="el-icon-time"></i> {{new Date().toLocaleString()}}</small>
+      <small>{{ comment.name }}</small>
+      <small><i class="el-icon-time"></i> {{new Date(comment.date).toLocaleString()}}</small>
     </div>
     <div class="comment-text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet, consequuntur delectus distinctio dolore facilis itaque nesciunt nisi non omnis, quam ratione similique ut. Asperiores dolorum ducimus harum ratione soluta.
+      {{comment.text}}
     </div>
   </el-card>
 </template>

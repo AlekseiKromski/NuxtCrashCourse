@@ -12,10 +12,12 @@ router.post('/', async(req,res) => {
     }).save();
 
     const post = await Post.findById(req.body.postId);
-    await  post.comments.push(comment._id).save();
+    post.comments.push(comment._id)
+    await post.save();
 
     res.status(201).json(comment);
   }catch (e){
+    console.log(e)
     res.status(500).json({"msg": "server error"})
   }
 })

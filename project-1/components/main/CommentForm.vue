@@ -23,6 +23,7 @@
 <script>
 export default {
   name: "CommentForm",
+  props: ['postId'],
   data(){
     return {
       loading: false,
@@ -43,20 +44,23 @@ export default {
   },
   methods: {
     onSubmit(){
-      this.$refs.form.validate((valid) => {
+      this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true;
 
           const formData = {
             name: this.controls.name,
             text: this.controls.text,
-            postId: ""
+            postId: this.postId
           }
 
           //Feature: upload to backend
           try{
+            const comment = await this.$store.dispatch('comment/create', formData)
+
+
             this.$message.success('Коментарий был добавлен');
-            this.$emit('created');
+            this.$emit('created', comment);
           }catch (e){
             this.loading = false;
           }

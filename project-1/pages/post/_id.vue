@@ -25,11 +25,12 @@
       <comment-form
         @created="createCommentHandler"
         v-if="canAddComment"
+        :postId="post._id"
       ></comment-form>
       <div class="comments" v-if="post.comments.length !== 0">
         <comment
           v-for="comment in post.comments"
-          :key="comment"
+          :key="comment._id"
           :comment="comment"
         />
       </div>
@@ -61,7 +62,9 @@ export default {
     }
   },
   methods: {
-    createCommentHandler(){
+    createCommentHandler(comment){
+      console.log(comment)
+      this.post.comments.unshift(comment);
       this.canAddComment = false;
     }
   },

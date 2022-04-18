@@ -1,12 +1,15 @@
 <template>
-  <h1>admin</h1>
+
 </template>
 
 <script>
 export default {
   name: "index",
   layout: "admin",
-  middleware: ['admin-auth']
+  middleware: ['admin-auth'],
+  mounted() {
+    this.renderChart()
+  },
 }
 </script>
 

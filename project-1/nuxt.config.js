@@ -46,7 +46,12 @@ export default {
     '@oruga-ui/oruga/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
+
+  workbox: {
+
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

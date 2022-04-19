@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db169ba-c4df-4c0e-84dc-3c7768b0a8a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-1/components/admin/Bar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/components/admin/Bar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/components/admin/Bar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/components/main/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/components/main/CommentForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-1/pages/admin/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/pages/admin/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/server/routes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/server/routes/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-1/store/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-1/store/post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -94,6 +97,8 @@
       <workItem from="1650203278016" duration="4246000" />
       <workItem from="1650207936831" duration="6233000" />
       <workItem from="1650273967524" duration="3257000" />
+      <workItem from="1650298993808" duration="10000" />
+      <workItem from="1650354433551" duration="4899000" />
     </task>
     <servers />
   </component>

@@ -100,6 +100,16 @@ export const actions= {
       console.log(e)
       commit('setErrorMutation', e, {root: true})
     }
+  },
+
+  async getAnalytics({commit}){
+    try{
+      return await this.$axios.$get('/api/post/admin/get/analytics')
+
+    }catch (e){
+      console.log(e)
+      commit('setErrorMutation', e, {root: true})
+    }
   }
 }
 

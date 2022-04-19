@@ -128,6 +128,35 @@ router.put('/add/view/:id', async (req,res) => {
   }
 })
 
+
+//analitycs
+router.get('/admin/get/analytics', passport.authenticate('passport-jwt', {session: false}), async (req,res) => {
+  try{
+    const posts = await Post.find();
+    const json = {
+      comments: {
+        labels: posts.map(post => {
+          return post.title
+        }),
+        data: posts.map(post => {
+          return post.comments.length
+        })
+      },
+      views: {
+        labels: posts.map(post => {
+          return post.title
+        }),
+        data: posts.map(post => {
+          return post.views
+        })
+      }
+    }
+    res.json(json)
+  }catch (e){
+    console.log(e)
+  }
+})
+
 module.exports = router;
 
 

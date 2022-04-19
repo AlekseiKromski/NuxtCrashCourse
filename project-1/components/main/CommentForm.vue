@@ -3,10 +3,10 @@
     <h1>Добавить комментарий</h1>
     <el-form @submit.native.prevent="onSubmit" :model="controls" :rules="rules" ref="form">
       <el-form-item label="Имя" prop="name">
-        <el-input v-model.trim="controls.name"/>
+        <el-input v-model="controls.name"/>
       </el-form-item>
       <el-form-item label="Текст" prop="text">
-        <el-input type="textarea" resize="none" rows="2" v-model.trim="controls.text"/>
+        <el-input type="textarea" resize="none" rows="2" v-model="controls.text"/>
       </el-form-item>
       <el-form-item>
         <el-button

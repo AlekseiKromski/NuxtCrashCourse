@@ -26,7 +26,6 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/axios',
-    'node_modules/vue-chartjs'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -34,7 +33,7 @@ export default {
 
   // Modules for dev and buidld (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -10,7 +10,7 @@
       >
         <h3>{{ post.title }}</h3>
 
-        <small>{{new Date(post.date).toLocaleString()}}</small>
+        <small>{{post.date | date}}</small>
       </header>
 
       <div

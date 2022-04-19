@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="12" v-for="bar in bars">
-      <Bar :height="350" :data="bar.data" :options="bar.options" />
+      <Bar :key="bar.key" :height="350" :data="bar.data" :options="bar.options" />
 
     </el-col>
   </el-row>
@@ -25,6 +25,7 @@ export default {
     let bars = []
     for (let key in analytics){
       let analytic = {
+        key: key,
         data: {
           labels: analytics[key].labels,
           datasets: [

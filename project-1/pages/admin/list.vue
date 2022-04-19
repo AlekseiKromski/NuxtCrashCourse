@@ -12,7 +12,7 @@
         label="Дата">
         <template slot-scope="{row: {date}}">
           <i class="el-icon-time"></i>
-          <span style="margin-left: 10px">{{ new Date(date).toLocaleString() }}</span>
+          <span style="margin-left: 10px">{{date | date}}</span>
         </template>
       </el-table-column>
       <el-table-column

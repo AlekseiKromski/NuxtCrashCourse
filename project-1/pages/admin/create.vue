@@ -55,6 +55,9 @@ export default {
   name: "create",
   layout: "admin",
   middleware: ['admin-auth'],
+  head :{
+    title: `Создание поста | ${process.env.appName}`
+  },
   components: {
     'vue-markdown': VueMarkdown
   },

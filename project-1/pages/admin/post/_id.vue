@@ -50,10 +50,9 @@ export default {
   name: "_id",
   layout: "admin",
   middleware: ['admin-auth'],
-  head: function() {
-    return {
-      title: this.post.title
-    }
+
+  head :{
+    title: `Детали | ${process.env.appName}`
   },
   validate({params}){
     return !!params.id

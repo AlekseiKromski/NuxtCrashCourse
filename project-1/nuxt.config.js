@@ -28,6 +28,10 @@ export default {
     '@/plugins/axios',
   ],
 
+  env: {
+    appName: "SSR BLOG"
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

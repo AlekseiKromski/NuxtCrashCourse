@@ -61,6 +61,9 @@ export default {
   name: "list",
   layout: "admin",
   middleware: ['admin-auth'],
+  head :{
+    title: `Список постов | ${process.env.appName}`
+  },
   async asyncData({store}){
     const posts = await store.dispatch('post/fetchAdminPosts')
     return {

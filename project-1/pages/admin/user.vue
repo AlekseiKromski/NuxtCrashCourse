@@ -25,6 +25,9 @@ export default {
   name: "user",
   layout: "admin",
   middleware: ['admin-auth'],
+  head :{
+    title: `Пользователь | ${process.env.appName}`
+  },
   data(){
     return {
       loading:false,

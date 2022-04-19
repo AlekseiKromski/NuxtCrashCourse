@@ -14,6 +14,9 @@ export default {
   layout: "admin",
   middleware: ['admin-auth'],
   components: { Bar },
+  head :{
+    title: `Аналитика | ${process.env.appName}`
+  },
   data() {
     return {
 

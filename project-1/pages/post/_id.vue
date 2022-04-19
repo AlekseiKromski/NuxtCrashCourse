@@ -53,6 +53,11 @@ export default {
     'comment-form': CommentForm,
     'vue-markdown': VueMarkdown
   },
+  head() {
+    return{
+      title: `${this.post.title} | ${process.env.appName}`
+    }
+  },
   validate({params}){
     return !!params.id;
   },

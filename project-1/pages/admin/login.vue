@@ -25,6 +25,9 @@
 
 <script>
 export default {
+  head :{
+    title: `Вход | ${process.env.appName}`
+  },
   name: "login",
   layout: "empty",
   data(){

@@ -72,4 +72,7 @@ export default {
     padding: 1rem;
     align-items: center;
   }
+  .post img{
+    width: 100%;
+  }
 </style>

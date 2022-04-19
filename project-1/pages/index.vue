@@ -14,7 +14,7 @@
 import Post from '../components/main/Post'
 export default {
   head :{
-    title: "Main"
+    title: `Главная | ${process.env.appName}`
   },
   name: "index",
   components: {

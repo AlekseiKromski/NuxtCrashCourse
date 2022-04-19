@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h1>SSR Blog</h1>
+    <h1><nuxt-link to="/">SSR Blog</nuxt-link></h1>
   </nav>
 </template>
 
@@ -17,5 +17,9 @@ nav{
   justify-content: center;
   height: 100%;
   border-bottom: 1px solid #e6e6e6;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 </style>

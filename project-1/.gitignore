@@ -90,3 +90,4 @@ sw.*
 *.swp
 
 /project-1/static/
+/project-1/keys/

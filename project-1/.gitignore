@@ -89,5 +89,4 @@ sw.*
 # Vim swap files
 *.swp
 
-/project-1/static/
-/project-1/keys/
+
